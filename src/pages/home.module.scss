@@ -1,1 +1,42 @@
-// TODO
+.content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.posts {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    strong {
+        font-size: 2rem;
+        transition: color 0.2s;
+    
+        &:hover {
+            color: var(--gray-100)
+        }
+    }
+    
+    p {
+        font-size: 1rem;
+        margin: 0.5rem 0 1rem;
+        color: var(--gray-100)
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+        font-size: 1rem;
+        height: 2rem;
+        color: var(--gray-100)
+    }
+
+}
+.highlight {
+    background-color: transparent;
+    border: none;
+    color: var(--pink-500);
+    font-weight: bold;
+}

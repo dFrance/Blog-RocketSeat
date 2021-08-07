@@ -1,1 +1,49 @@
-// TODO
+.banner {
+
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.container {
+    max-width: 720px;
+    margin: 4rem auto 0;
+
+    
+    > strong {
+        font-size: 3.5rem;
+    }
+
+    > div {
+        display: flex;
+        margin-top: 2rem;
+        justify-content: flex-start;
+        gap: 2rem;
+
+        color: var(--gray-300);
+        font-size: 1rem;
+
+        .data {
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+
+    article {
+        margin-bottom: 2.5rem;
+        
+        strong {
+            display: block;
+            margin: 2.5rem 0;
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1rem;
+            text-align: justify; 
+            line-height: 140%;
+        }
+    }
+}
