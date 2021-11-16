@@ -14,15 +14,13 @@ import { useState } from 'react';
 interface Post {
   slug: string;
   first_publication_date: string | null;
-  data: {
-    title: string;
-    subtitle: string;
-    author: string;
-    banner: string;
-    heading: string;
-    content: string;
-    updatedAt: string;
-  };
+  title: string;
+  subtitle: string;
+  author: string;
+  banner: string;
+  heading: string;
+  content: string;
+  updatedAt: string;
 }
 
 interface PostPagination {
@@ -44,9 +42,9 @@ export default function Home({ posts, next_page }: PostPagination) {
         const formattedPosts = data.results.map(post => {
           return {
             slug: post.slugs[0],
-            title: post.data.title[0].text,
-            subtitle: post.data.subtitle[0].text,
-            author: post.data.author[0].text,
+            title: post.title[0].text,
+            subtitle: post.subtitle[0].text,
+            author: post.author[0].text,
             updatedAt: new Date(post.last_publication_date).toLocaleDateString('pt-BR', {
               day: '2-digit',
               month: 'long',

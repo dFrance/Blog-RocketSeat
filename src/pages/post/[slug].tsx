@@ -16,6 +16,7 @@ interface Post {
   first_publication_date: string | null;
   date?: string | null;
   data: {
+    publicationDate: number;
     title: string;
     banner: {
       url: string;
@@ -45,12 +46,13 @@ export default function Post({ post }: PostProps) {
     const minutes = timeAgo / 60000;
     const hours = minutes / 60;
     const days = hours / 24;
+    console.log(typeof(minutes))
     if (days >= 1) {
-      setTimePosted(parseInt(days) + ` dia` + (days > 1 ? 's' : ''))
+      setTimePosted(days.toFixed() + ` dia` + (days > 1 ? 's' : ''))
     } else if (hours > 1) {
-      setTimePosted(parseInt(hours) + ' hora' + (hours > 1 ? 's' : ''))
+      setTimePosted(hours.toFixed() + ' hora' + (hours > 1 ? 's' : ''))
     } else if (minutes > 5) {
-      setTimePosted((parseInt(minutes) + ' minuto' + (minutes > 1 ? 's' : '')))
+      setTimePosted((minutes.toFixed() + ' minuto' + (minutes > 1 ? 's' : '')))
     } else if (minutes >= 0) {
       setTimePosted('Postado a poucos minutos')
     }
